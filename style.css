@@ -1,0 +1,107 @@
+html {
+    font-size: 62.5%;
+}
+
+.container {
+
+    width: 50%;
+    height: 50rem;
+    background: lightgrey;
+    animation-name: text-size;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+.droite-gauche {
+    background: black;
+    position: absolute;
+    width: 20%;
+    height: 20rem;
+    animation-name: droite-gauche;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+@keyframes text-size {
+    0% {
+        position: fixed;
+        font-size: 1rem;
+        width: 55%;
+        background: lightskyblue;
+    }
+
+    25% {
+        position: fixed;
+        font-size: 1.2rem;
+        width: 60%;
+        background: indianred;
+    }
+
+    50% {
+        position: fixed;
+        font-size: 1.6rem;
+        width: 65%;
+        background: pink;
+    }
+
+    75% {
+        position: fixed;
+        font-size: 1.8rem;
+        width: 70%;
+        background: crimson;
+    }
+
+    100% {
+        position: fixed;
+        font-size: 2rem;
+        width: 75%;
+        background: darkcyan;
+        transform-origin: right;
+        transform: rotate(360deg) scale(0.9);
+    }
+}
+
+@keyframes droite-gauche {
+    0% {
+        margin-left: 0;
+    }
+
+
+    50% {
+        margin-left: 100%;
+    }
+
+
+    100% {
+        margin-right: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        height: 30rem;
+        width: 40%;
+    }
+
+    .droite-gauche {
+        width: 10%;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        height: 25rem;
+        width: 15%;
+    }
+
+    .droite-gauche {
+        width: 5%;
+        height: 5rem;
+    }
+}
